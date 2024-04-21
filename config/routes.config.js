@@ -11,8 +11,11 @@ router.patch('/api/posts/:id', checkAuth, post.updatePost); // Actualizar un pos
 router.delete('/api/posts/:id', checkAuth, post.deletePost); // Eliminar un post por su ID
 
 // Nuevos endpoints para el controlador de usuario
-router.post('/api/users', user.createUser); // Crear un nuevo usuario
+router.post('/api/users', user.createUser); // Crear un nuevo usuario 
 router.get('/api/list', checkAuthJWT, user.list); // Encontrar el usuario agregado
 router.post('/api/login', user.loginUser); // Iniciar sesión de usuario
+
+
+router.get('/api/users/verify', user.verify) // Verificar
 
 module.exports = router;

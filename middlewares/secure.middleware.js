@@ -29,7 +29,7 @@ module.exports.checkAuthJWT = (req, res, next) => {
 
   try {
     // Verifica el token JWT utilizando la clave secreta
-    const decoded = jwt.verify(token, 'secretKey'); // Reemplaza 'secretKey' con tu clave secreta
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.userId = decoded.userId; // Añade el ID de usuario decodificado a la solicitud
     next();
   } catch (err) {

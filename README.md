@@ -42,6 +42,9 @@
 
 
 Instalar la bibliote uuid:npm install uuid
+npm install jsonwebtoken
+npm i dotenv libreria que busca un fichero en la raiz llamado dotenv, donde estan definidas las variable de entorno definidas al ejecutar el programa
+
 
 1. POST /api/users:
     URL: http://localhost:8000/api/users
@@ -65,6 +68,9 @@ Instalar la bibliote uuid:npm install uuid
     json
 
     {
-        "email": "leire@gmail.com",
-        "password": "leire12345"
+        "email": "juan@example.com",
+        "password": "clave123",
     }
+
+    Para probar la autentificacion de postController.js:
+    
